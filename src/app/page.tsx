@@ -7,7 +7,7 @@ import { Footer } from '@/components/layout/footer';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="relative z-10 flex min-h-screen flex-col"> {/* Ensure content is above fixed background */}
       <Header />
       <div className="container mx-auto flex-grow px-4 py-12 md:px-6 lg:py-16">
         <AboutSection />

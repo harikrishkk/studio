@@ -54,6 +54,12 @@ body {
     --sidebar-accent-foreground: 224 71% 4%;
     --sidebar-border: 214.3 31.8% 88%;
     --sidebar-ring: 120 61% 34%;
+
+    /* Animated Background Colors */
+    --bg-square-color-1: hsl(var(--primary));
+    --bg-square-color-2: hsl(var(--secondary));
+    --bg-square-color-3: hsl(var(--accent));
+    --bg-square-color-4: hsl(var(--muted)); /* Using muted for a softer look */
   }
 
   .dark {
@@ -100,6 +106,12 @@ body {
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 217.2 32.6% 25%;
     --sidebar-ring: 120 50% 50%;
+
+    /* Animated Background Colors - Dark */
+    --bg-square-color-1: hsl(var(--primary));
+    --bg-square-color-2: hsl(var(--secondary));
+    --bg-square-color-3: hsl(var(--accent));
+    --bg-square-color-4: hsl(var(--muted) / 0.8); /* Slightly transparent muted */
   }
 }
 
@@ -111,6 +123,64 @@ body {
     @apply scroll-smooth; /* Enable smooth scrolling */
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden; /* Prevent horizontal scroll */
   }
+
+  /* Animated Background Styles */
+  .background-squares {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: -1; /* Ensure it's behind content */
+  }
+
+  .background-squares li {
+    position: absolute;
+    bottom: -160px; /* Start below the viewport */
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-square-color-1); /* Default color */
+    opacity: 0;
+    animation: square-animation 15s infinite;
+    transition-timing-function: linear;
+  }
+
+  .background-squares li:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 10s; }
+  .background-squares li:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 7s; background-color: var(--bg-square-color-2); }
+  .background-squares li:nth-child(3) { left: 25%; animation-delay: 4s; animation-duration: 12s; background-color: var(--bg-square-color-3); }
+  .background-squares li:nth-child(4) { left: 40%; animation-delay: 0s; animation-duration: 18s; width: 60px; height: 60px; background-color: var(--bg-square-color-4); }
+  .background-squares li:nth-child(5) { left: 70%; animation-delay: 1s; animation-duration: 10s; }
+  .background-squares li:nth-child(6) { left: 80%; animation-delay: 3s; animation-duration: 14s; width: 120px; height: 120px; background-color: var(--bg-square-color-2); }
+  .background-squares li:nth-child(7) { left: 32%; animation-delay: 7s; animation-duration: 9s; background-color: var(--bg-square-color-3); }
+  .background-squares li:nth-child(8) { left: 55%; animation-delay: 1s; animation-duration: 22s; width: 25px; height: 25px; background-color: var(--bg-square-color-4); }
+  .background-squares li:nth-child(9) { left: 25%; animation-delay: 2s; animation-duration: 11s; }
+  .background-squares li:nth-child(10) { left: 90%; animation-delay: 4s; animation-duration: 8s; width: 150px; height: 150px; background-color: var(--bg-square-color-1); }
+  .background-squares li:nth-child(11) { left: 5%; animation-delay: 6s; animation-duration: 13s; background-color: var(--bg-square-color-2); }
+  .background-squares li:nth-child(12) { left: 15%; animation-delay: 8s; animation-duration: 16s; width: 35px; height: 35px; background-color: var(--bg-square-color-3); }
+  .background-squares li:nth-child(13) { left: 50%; animation-delay: 3s; animation-duration: 9s; }
+  .background-squares li:nth-child(14) { left: 65%; animation-delay: 5s; animation-duration: 19s; width: 80px; height: 80px; background-color: var(--bg-square-color-4); }
+  .background-squares li:nth-child(15) { left: 85%; animation-delay: 9s; animation-duration: 12s; }
+
+  /* Add more nth-child rules if needed for more squares */
+
+  @keyframes square-animation {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-120vh) rotate(600deg); /* Move up and rotate */
+      opacity: 0;
+    }
+  }
+
 }
