@@ -3,7 +3,7 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
-import { AnimatedBackground } from '@/components/layout/animated-background'; // Import the new component
+import { AnimatedGradientBackground } from '@/components/layout/animated-gradient-background'; // Import the new component
 
 const geistSans = GeistSans;
 const geistMono = GeistMono;
@@ -19,12 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
-      <body className={`font-mono antialiased relative`}> {/* Add relative positioning */}
-        <AnimatedBackground /> {/* Add the animated background */}
-        <div className="relative z-10"> {/* Ensure content is above the background */}
+    // Apply dark theme globally and ensure scroll-smooth behavior
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}>
+      {/* Ensure body uses monospace font via variable and has relative positioning for z-index stacking */}
+      <body className={`font-mono antialiased relative`}>
+        {/* The animated background component */}
+        <AnimatedGradientBackground />
+        {/* Content container with higher z-index to appear above the background */}
+        <div className="relative z-10">
           <main>{children}</main>
         </div>
+        {/* Toaster for notifications */}
         <Toaster />
       </body>
     </html>
