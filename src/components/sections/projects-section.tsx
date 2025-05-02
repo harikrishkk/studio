@@ -46,7 +46,8 @@ export function ProjectsSection() {
 
   return (
     <section id="projects" className="mb-16 scroll-mt-14 md:mb-24 md:scroll-mt-16">
-      <h2 className="mb-8 text-center text-3xl font-bold text-primary md:text-4xl">
+      {/* Removed text-primary */}
+      <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">
         <FolderGit2 className="mr-2 inline-block h-8 w-8" /> Projects
       </h2>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -56,7 +57,7 @@ export function ProjectsSection() {
               <Image
                 src={project.imageUrl}
                 alt={`${project.title} Screenshot`}
-                layout="fill"
+                fill // Changed layout to fill for better responsiveness
                 objectFit="cover"
                 className="bg-muted"
                  data-ai-hint={project.aiHint}
@@ -71,7 +72,8 @@ export function ProjectsSection() {
             <CardContent className="flex-grow">
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="rounded-full bg-secondary/10 px-3 py-1 text-xs font-medium text-secondary">
+                  // Removed secondary color classes, using default badge styles (adjusted for better contrast in dark mode)
+                  <span key={tag} className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
                     {tag}
                   </span>
                 ))}

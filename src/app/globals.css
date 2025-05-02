@@ -9,109 +9,109 @@ body {
 
 @layer base {
   :root {
-    /* Light Theme - Canadian Palette (Keeping for reference, but dark is default) */
+    /* Light Theme - Neutral Palette (Keeping for reference, but dark is default) */
     --background: 210 40% 98%; /* Light cool gray */
-    --foreground: 224 71% 4%; /* Very dark blue */
+    --foreground: 224 71% 10%; /* Very dark blue */
 
     --card: 0 0% 100%;
-    --card-foreground: 224 71% 4%;
+    --card-foreground: 224 71% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 4%;
+    --popover-foreground: 224 71% 10%;
 
-    --primary: 120 61% 34%; /* Forest Green */
-    --primary-foreground: 0 0% 98%; /* White for contrast on green */
+    --primary: 220 9% 46%; /* Neutral Gray */
+    --primary-foreground: 210 40% 98%; /* Light cool gray */
 
-    --secondary: 16 100% 50%; /* Maple Leaf Red */
-    --secondary-foreground: 0 0% 98%; /* White for contrast on red */
+    --secondary: 210 40% 96.1%; /* Lighter Gray */
+    --secondary-foreground: 224 71% 10%; /* Very dark blue */
 
-    --muted: 210 40% 96.1%; /* Slightly darker light cool gray */
-    --muted-foreground: 215 20% 65.1%; /* Medium gray */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 20% 65.1%;
 
-    --accent: 51 100% 50%; /* Golden Yellow */
-    --accent-foreground: 224 71% 4%; /* Dark for contrast on yellow */
+    --accent: 210 40% 90%; /* Light Gray Accent */
+    --accent-foreground: 224 71% 10%;
 
     --destructive: 0 84.2% 60.2%; /* Default red */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%; /* Light gray border */
-    --input: 214.3 31.8% 91.4%; /* Light gray input background */
-    --ring: 120 61% 34%; /* Forest Green for focus rings */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 220 9% 46%; /* Neutral Gray for focus rings */
 
-    --chart-1: 120 61% 34%;
-    --chart-2: 16 100% 50%;
-    --chart-3: 51 100% 50%;
-    --chart-4: 210 40% 56.1%;
-    --chart-5: 190 70% 40%;
+    --chart-1: 220 9% 46%;
+    --chart-2: 210 40% 70%;
+    --chart-3: 210 40% 50%;
+    --chart-4: 224 71% 30%;
+    --chart-5: 215 20% 65.1%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 210 40% 96.1%;
-    --sidebar-foreground: 224 71% 4%;
-    --sidebar-primary: 120 61% 34%;
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-foreground: 224 71% 10%;
+    --sidebar-primary: 220 9% 46%;
+    --sidebar-primary-foreground: 210 40% 98%;
     --sidebar-accent: 210 40% 90%;
-    --sidebar-accent-foreground: 224 71% 4%;
+    --sidebar-accent-foreground: 224 71% 10%;
     --sidebar-border: 214.3 31.8% 88%;
-    --sidebar-ring: 120 61% 34%;
+    --sidebar-ring: 220 9% 46%;
 
     /* Animated Gradient Background Colors - Light */
-    --gradient-color-1: 120 61% 34%; /* Forest Green */
-    --gradient-color-2: 16 100% 50%; /* Maple Leaf Red */
-    --gradient-color-3: 51 100% 50%; /* Golden Yellow */
-    --gradient-color-4: 210 40% 80%; /* Lighter Muted blue */
+    --gradient-color-1: 220 9% 70%; /* Lighter Gray */
+    --gradient-color-2: 210 40% 90%; /* Light Gray Accent */
+    --gradient-color-3: 210 40% 96%; /* Near White */
+    --gradient-color-4: 210 40% 98%; /* Base Light */
   }
 
   .dark {
-    /* Dark Theme - Canadian Palette (Adjusted for dark mode) */
-    --background: 224 71% 10%; /* Very dark blue */
+    /* Dark Theme - Neutral Palette */
+    --background: 224 71% 4%; /* Very dark blue */
     --foreground: 210 40% 98%; /* Light cool gray */
 
-    --card: 224 71% 12%; /* Slightly lighter dark blue */
+    --card: 224 71% 10%; /* Slightly lighter dark blue */
     --card-foreground: 210 40% 98%;
 
-    --popover: 224 71% 10%;
+    --popover: 224 71% 8%; /* Even darker blue */
     --popover-foreground: 210 40% 98%;
 
-    --primary: 120 50% 50%; /* Slightly lighter Forest Green */
-    --primary-foreground: 0 0% 98%;
+    --primary: 210 40% 80%; /* Lighter Gray-Blue */
+    --primary-foreground: 224 71% 4%; /* Very dark blue for contrast */
 
-    --secondary: 16 90% 60%; /* Slightly lighter Maple Leaf Red */
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 224 71% 12%; /* Dark Blue-Gray */
+    --secondary-foreground: 210 40% 98%; /* Light cool gray */
 
     --muted: 224 71% 15%; /* Darker blue-gray */
-    --muted-foreground: 215 20% 65.1%;
+    --muted-foreground: 215 20% 65.1%; /* Medium gray */
 
-    --accent: 51 90% 60%; /* Slightly lighter Golden Yellow */
-    --accent-foreground: 224 71% 4%;
+    --accent: 224 71% 18%; /* Darker Accent */
+    --accent-foreground: 210 40% 98%; /* Light cool gray */
 
     --destructive: 0 62.8% 30.6%; /* Default dark red */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 25%; /* Darker gray border */
-    --input: 217.2 32.6% 25%; /* Darker gray input background */
-    --ring: 120 50% 50%; /* Lighter Forest Green for focus rings */
+    --border: 217.2 32.6% 17.5%; /* Darker gray border */
+    --input: 217.2 32.6% 17.5%; /* Darker gray input background */
+    --ring: 210 40% 80%; /* Lighter Gray-Blue for focus rings */
 
-    --chart-1: 120 50% 50%;
-    --chart-2: 16 90% 60%;
-    --chart-3: 51 90% 60%;
-    --chart-4: 210 40% 56.1%;
-    --chart-5: 190 70% 40%;
+    --chart-1: 210 40% 80%;
+    --chart-2: 210 40% 60%;
+    --chart-3: 215 20% 65.1%;
+    --chart-4: 224 71% 25%;
+    --chart-5: 210 40% 98%;
 
-    --sidebar-background: 224 71% 12%;
+    --sidebar-background: 224 71% 8%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 120 50% 50%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 224 71% 18%;
+    --sidebar-primary: 210 40% 80%;
+    --sidebar-primary-foreground: 224 71% 4%;
+    --sidebar-accent: 224 71% 15%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217.2 32.6% 25%;
-    --sidebar-ring: 120 50% 50%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 210 40% 80%;
 
     /* Animated Gradient Background Colors - Dark */
-    --gradient-color-1: 120 50% 30%; /* Darker Forest Green */
-    --gradient-color-2: 16 80% 40%;  /* Darker Maple Leaf Red */
-    --gradient-color-3: 51 80% 40%;  /* Darker Golden Yellow */
-    --gradient-color-4: 224 71% 10%; /* Base dark background */
+    --gradient-color-1: 224 71% 8%;  /* Darker Blue */
+    --gradient-color-2: 224 71% 12%; /* Medium Dark Blue */
+    --gradient-color-3: 217 32% 20%; /* Dark Slate Gray/Blue */
+    --gradient-color-4: 224 71% 4%;  /* Base Very Dark Blue */
   }
 }
 
@@ -145,6 +145,7 @@ body {
       hsl(var(--gradient-color-4)) 100%
     );
     transition: background-position 0.1s ease-out; /* Optional: Smooth transition for background changes if any */
+    z-index: -10; /* Ensure it's behind everything */
   }
 
   /* Optional: Grain effect overlay */
@@ -152,10 +153,12 @@ body {
     position: absolute;
     inset: -200%;
     background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="4" numOctaves="6" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
-    opacity: 0.1; /* Adjust opacity for desired grain intensity */
+    opacity: 0.05; /* Reduced opacity for subtlety */
     animation: grain 8s steps(10) infinite;
-    z-index: 0; /* Ensure it's above the gradient but below content */
+    z-index: -9; /* Ensure it's above the gradient but below content */
+    pointer-events: none; /* Prevent grain from interfering with mouse events */
   }
+
 
   @keyframes grain {
     0%, 100% { transform: translate(0, 0); }

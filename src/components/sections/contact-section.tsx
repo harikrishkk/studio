@@ -53,7 +53,8 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="mb-16 scroll-mt-14 md:mb-24 md:scroll-mt-16">
-      <h2 className="mb-8 text-center text-3xl font-bold text-primary md:text-4xl">
+      {/* Removed text-primary */}
+      <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">
         <Send className="mr-2 inline-block h-8 w-8" /> Get In Touch
       </h2>
       <Card className="mx-auto max-w-2xl shadow-lg">
@@ -74,7 +75,8 @@ export function ContactSection() {
                 onChange={(e) => setName(e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="focus:ring-accent"
+                // Removed focus:ring-accent
+                className=""
               />
             </div>
             <div className="space-y-2">
@@ -87,7 +89,8 @@ export function ContactSection() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="focus:ring-accent"
+                // Removed focus:ring-accent
+                className=""
               />
             </div>
             <div className="space-y-2">
@@ -100,13 +103,15 @@ export function ContactSection() {
                 onChange={(e) => setMessage(e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="focus:ring-accent"
+                // Removed focus:ring-accent
+                className=""
               />
             </div>
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+              // Removed accent-specific classes, rely on default button variant
+              className="w-full"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
               {!isSubmitting && <Send className="ml-2 h-4 w-4" />}

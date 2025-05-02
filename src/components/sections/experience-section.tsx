@@ -47,16 +47,18 @@ export function ExperienceSection() {
 
   return (
     <section id="experience" className="mb-16 scroll-mt-14 md:mb-24 md:scroll-mt-16">
-      <h2 className="mb-8 text-center text-3xl font-bold text-primary md:text-4xl">
+      {/* Removed text-primary */}
+      <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">
         <Briefcase className="mr-2 inline-block h-8 w-8" /> Work Experience
       </h2>
-      <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-transparent before:via-primary/50 before:to-transparent md:before:mx-auto md:before:translate-x-0">
+      {/* Updated timeline gradient to use theme variables */}
+      <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent md:before:mx-auto md:before:translate-x-0">
         {experiences.map((exp, index) => (
           <div key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-            {/* Dot */}
+            {/* Dot - removed border-primary and bg-secondary */}
             <div className="absolute left-5 top-1/2 -translate-y-1/2 -translate-x-px transform md:left-1/2 md:-translate-x-1/2">
-              <div className="flex h-4 w-4 items-center justify-center rounded-full border-2 border-primary bg-background">
-                <div className="h-2 w-2 rounded-full bg-secondary"></div>
+              <div className="flex h-4 w-4 items-center justify-center rounded-full border-2 border bg-background">
+                <div className="h-2 w-2 rounded-full bg-primary"></div>
               </div>
             </div>
 

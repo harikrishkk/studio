@@ -23,11 +23,13 @@ export function AboutSection() {
               alt="Profile Picture"
               width={150}
               height={150}
-              className="rounded-full border-4 border-primary shadow-md"
+              // Removed border-primary, border color comes from theme
+              className="rounded-full border-4 shadow-md"
               data-ai-hint="professional developer portrait"
             />
             <div className="text-center md:text-left">
-              <CardTitle className="text-3xl font-bold text-primary md:text-4xl">
+              {/* Removed text-primary */}
+              <CardTitle className="text-3xl font-bold md:text-4xl">
                 Your Name Here
               </CardTitle>
               <p className="mt-1 text-lg text-muted-foreground">Seasoned Front-End Developer</p>
@@ -39,16 +41,19 @@ export function AboutSection() {
             Passionate and experienced front-end developer with a knack for building beautiful, performant, and user-friendly web applications. Specializing in modern JavaScript frameworks and dedicated to writing clean, maintainable code. Always eager to learn and explore new technologies. Based in Canada, eh! 🍁
           </p>
 
-          <h3 className="mb-3 text-xl font-semibold text-secondary">Skills</h3>
+          {/* Removed text-secondary */}
+          <h3 className="mb-3 text-xl font-semibold">Skills</h3>
           <div className="mb-6 flex flex-wrap gap-2">
             {skills.map((skill) => (
-              <span key={skill} className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+              // Removed explicit primary colors, using default badge styles
+              <span key={skill} className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary-foreground">
                 {skill}
               </span>
             ))}
           </div>
 
-          <h3 className="mb-3 text-xl font-semibold text-secondary">Connect</h3>
+          {/* Removed text-secondary */}
+          <h3 className="mb-3 text-xl font-semibold">Connect</h3>
           <div className="flex flex-wrap gap-3">
             {socialLinks.map((link) => (
               <Button key={link.name} variant="outline" size="sm" asChild>
