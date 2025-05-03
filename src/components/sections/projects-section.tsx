@@ -47,7 +47,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="mb-16 scroll-mt-14 md:mb-24 md:scroll-mt-16">
       <h2 className="mb-8 text-center text-3xl font-bold text-foreground md:text-4xl">
-        <FolderGit2 className="mr-2 inline-block h-8 w-8" /> Projects
+         Projects {/* Removed FolderGit2 icon */}
       </h2>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, Code } from 'lucide-react'; // Added Code icon for default tech
+import { Briefcase, Code } from 'lucide-react'; // Keep Code icon for default tech
 
 // Define a type for skills including an optional icon component
 interface TechStackItem {
@@ -76,7 +76,7 @@ export function ExperienceSection() {
   return (
     <section id="experience" className="mb-16 scroll-mt-14 md:mb-24 md:scroll-mt-16">
       <h2 className="mb-8 text-center text-3xl font-bold text-foreground md:text-4xl">
-        <Briefcase className="mr-2 inline-block h-8 w-8" /> Work Experience
+        Work Experience {/* Removed Briefcase icon */}
       </h2>
       {/* Updated timeline gradient to use theme variables */}
       <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent md:before:mx-auto md:before:translate-x-0">

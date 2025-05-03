@@ -54,7 +54,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="mb-16 scroll-mt-14 md:mb-24 md:scroll-mt-16">
       <h2 className="mb-8 text-center text-3xl font-bold text-foreground md:text-4xl">
-        <Send className="mr-2 inline-block h-8 w-8" /> Get In Touch
+         Get In Touch {/* Removed Send icon */}
       </h2>
       <Card className="mx-auto max-w-2xl shadow-lg bg-card/80 backdrop-blur-sm"> {/* Slightly transparent card */}
         <CardHeader>
