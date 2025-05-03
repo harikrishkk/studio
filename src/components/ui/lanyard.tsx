@@ -12,7 +12,7 @@ const LanyardCard = React.forwardRef<HTMLDivElement, LanyardCardProps>(
     <div
       ref={ref}
       className={cn(
-        'relative mx-auto max-w-3xl overflow-hidden rounded-xl border border-border/30 bg-card/60 shadow-lg backdrop-blur-sm',
+        'relative overflow-hidden rounded-xl border border-border/30 bg-card/60 shadow-lg backdrop-blur-sm', // Removed mx-auto max-w-3xl
         // Add a subtle grid pattern overlay
         'before:absolute before:inset-0 before:-z-10 before:bg-[radial-gradient(circle_at_center,_var(--color-dots)_1px,_transparent_1px)] before:[background-size:16px_16px] before:opacity-10',
         className
