@@ -61,8 +61,8 @@ export function ExperienceSection() {
               </div>
             </div>
 
-            {/* Card - made slightly transparent and added hover effect */}
-            <Card className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl bg-card/80 backdrop-blur-sm">
+            {/* Card - made slightly transparent and added hover effect with scale and skew */}
+            <Card className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] shadow-md transition-all duration-300 hover:scale-[1.02] hover:skew-x-1 hover:shadow-xl bg-card/80 backdrop-blur-sm">
               <CardHeader className="flex flex-row items-start gap-4 space-y-0">
                 <Image
                   src={exp.logoUrl}
