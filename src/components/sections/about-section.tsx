@@ -34,8 +34,18 @@ export function AboutSection() {
     <section id="about" className="mb-16 scroll-mt-14 md:mb-24 md:scroll-mt-16">
       {/* Use slightly transparent card background with backdrop blur */}
       <Card className="overflow-hidden shadow-lg bg-card/80 backdrop-blur-sm border border-border/50">
-        {/* Use slightly transparent header */}
-        <CardHeader className="bg-muted/30 p-6 md:p-8 border-b border-border/30">
+        {/* Use slightly transparent header with paper grid effect */}
+        <CardHeader
+          className="relative bg-muted/30 p-6 md:p-8 border-b border-border/30"
+          style={{
+            // Add subtle paper grid effect using theme variables
+            backgroundImage: `
+              repeating-linear-gradient(hsl(var(--border) / 0.1) 0 1px, transparent 1px 100%),
+              repeating-linear-gradient(90deg, hsl(var(--border) / 0.1) 0 1px, transparent 1px 100%)
+            `,
+            backgroundSize: '20px 20px', // Adjust grid size as needed
+          }}
+        >
           <div className="flex flex-col items-center gap-6 md:flex-row">
             <Image
               src="https://picsum.photos/150/150"
