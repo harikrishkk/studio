@@ -1,4 +1,5 @@
-import { LanyardSection } from '@/components/sections/lanyard-section'; // Updated import
+
+import { LanyardSection } from '@/components/sections/lanyard-section';
 import { ExperienceSection } from '@/components/sections/experience-section';
 import { ProjectsSection } from '@/components/sections/projects-section';
 import { TestimonialsSection } from '@/components/sections/testimonials-section';
@@ -11,8 +12,9 @@ export default function Home() {
   const portfolioData = getPortfolioData(); // Load data once
 
   return (
-    <div className="relative z-10 flex min-h-screen flex-col"> {/* Ensure content is above fixed background */}
+    <> {/* Use Fragment instead of div */}
       <Header data={portfolioData.header} />
+      {/* Use container for consistent padding and centering */}
       <div className="container mx-auto flex-grow px-4 py-12 md:px-6 lg:py-16">
         <LanyardSection data={portfolioData.lanyard} />
         <ExperienceSection data={portfolioData.experience} />
@@ -21,6 +23,6 @@ export default function Home() {
         <ContactSection data={portfolioData.contact} />
       </div>
       <Footer data={portfolioData.footer} />
-    </div>
+    </>
   );
 }
