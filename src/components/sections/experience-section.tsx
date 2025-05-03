@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase } from 'lucide-react';
+import { Briefcase, Code } from 'lucide-react'; // Added Code icon for default tech
+
+// Define a type for skills including an optional icon component
+interface TechStackItem {
+  name: string;
+  Icon?: React.ComponentType<{ className?: string }>; // Optional icon component
+}
 
 // Define an interface for the experience item
 interface ExperienceItem {
@@ -11,6 +17,7 @@ interface ExperienceItem {
   title: string;
   duration: string;
   description: string;
+  techStack: TechStackItem[]; // Added techStack property
 }
 
 export function ExperienceSection() {
@@ -22,7 +29,14 @@ export function ExperienceSection() {
       aiHint: 'modern tech company logo',
       title: 'Senior Front-End Developer',
       duration: 'Jan 2020 - Present',
-      description: 'Led the development of key features for the main product, mentored junior developers, and improved front-end performance by 30%. Worked extensively with React, Next.js, and TypeScript.',
+      description: 'Led the development of key features for the main product, mentored junior developers, and improved front-end performance by 30%.',
+      techStack: [
+        { name: 'React', Icon: Code },
+        { name: 'Next.js', Icon: Code },
+        { name: 'TypeScript', Icon: Code },
+        { name: 'Tailwind CSS', Icon: Code },
+        { name: 'Node.js', Icon: Code },
+      ],
     },
     {
       company: 'Innovate Solutions',
@@ -32,6 +46,13 @@ export function ExperienceSection() {
       title: 'Front-End Developer',
       duration: 'Jun 2017 - Dec 2019',
       description: 'Developed and maintained client websites using various JavaScript frameworks. Collaborated with designers and back-end developers to deliver high-quality web applications.',
+      techStack: [
+        { name: 'Vue.js', Icon: Code },
+        { name: 'JavaScript (ES6+)', Icon: Code },
+        { name: 'SCSS', Icon: Code },
+        { name: 'Webpack', Icon: Code },
+        { name: 'REST APIs', Icon: Code },
+      ],
     },
     {
       company: 'Web Wizards Agency',
@@ -41,6 +62,13 @@ export function ExperienceSection() {
       title: 'Junior Web Developer',
       duration: 'May 2015 - May 2017',
       description: 'Assisted senior developers in building responsive websites. Gained experience with HTML, CSS, JavaScript, and version control systems like Git.',
+      techStack: [
+        { name: 'HTML5', Icon: Code },
+        { name: 'CSS3', Icon: Code },
+        { name: 'jQuery', Icon: Code },
+        { name: 'Git', Icon: Code },
+        { name: 'PHP', Icon: Code }, // Added PHP as an example
+      ],
     },
     // Add more experiences as needed
   ];
@@ -80,7 +108,20 @@ export function ExperienceSection() {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-foreground/80">{exp.description}</p>
+                <p className="mb-4 text-sm text-foreground/80">{exp.description}</p> {/* Added margin-bottom */}
+                {/* Tech Stack Section */}
+                <div className="mt-3 flex flex-wrap gap-2"> {/* Added top margin */}
+                  {exp.techStack.map((tech) => (
+                    <span
+                      key={tech.name}
+                      // Using secondary for tech stack badges for subtle differentiation
+                      className="inline-flex items-center gap-1.5 rounded-full bg-secondary/30 px-3 py-1 text-xs font-medium text-secondary-foreground backdrop-blur-sm"
+                    >
+                      {tech.Icon ? <tech.Icon className="h-3 w-3" /> : <Code className="h-3 w-3" />} {/* Render icon or fallback */}
+                      {tech.name}
+                    </span>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           </div>
