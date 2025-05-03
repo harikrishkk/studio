@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Github, Youtube, Rss, Linkedin, Code } from 'lucide-react'; // Added Code icon
+import { Github, Youtube, Rss, Linkedin, Code, Braces, Network, Type, Palette, Database, Container, Server } from 'lucide-react'; // Added more icons
 
 // Define a type for skills including an optional icon component
 interface Skill {
@@ -11,16 +11,16 @@ interface Skill {
 }
 
 export function AboutSection() {
-  // Updated skills array to include icons (using Code as placeholder)
+  // Updated skills array with more specific icons from Lucide
   const skills: Skill[] = [
-    { name: 'React', Icon: Code },
-    { name: 'Next.js', Icon: Code },
-    { name: 'TypeScript', Icon: Code },
-    { name: 'Tailwind CSS', Icon: Code },
-    { name: 'Node.js', Icon: Code },
-    { name: 'Firebase', Icon: Code },
-    { name: 'GraphQL', Icon: Code },
-    { name: 'Docker', Icon: Code },
+    { name: 'React', Icon: Braces },
+    { name: 'Next.js', Icon: Network },
+    { name: 'TypeScript', Icon: Type },
+    { name: 'Tailwind CSS', Icon: Palette },
+    { name: 'Node.js', Icon: Server },
+    { name: 'Firebase', Icon: Database },
+    { name: 'GraphQL', Icon: Network }, // Reusing Network, suitable for APIs
+    { name: 'Docker', Icon: Container },
   ];
 
   const socialLinks = [
@@ -32,15 +32,17 @@ export function AboutSection() {
 
   return (
     <section id="about" className="mb-16 scroll-mt-14 md:mb-24 md:scroll-mt-16">
-      <Card className="overflow-hidden shadow-lg bg-card/80 backdrop-blur-sm"> {/* Slightly transparent card */}
-        <CardHeader className="bg-muted/50 p-6 md:p-8"> {/* Slightly transparent header */}
+      {/* Use slightly transparent card background with backdrop blur */}
+      <Card className="overflow-hidden shadow-lg bg-card/80 backdrop-blur-sm border border-border/50">
+        {/* Use slightly transparent header */}
+        <CardHeader className="bg-muted/30 p-6 md:p-8 border-b border-border/30">
           <div className="flex flex-col items-center gap-6 md:flex-row">
             <Image
               src="https://picsum.photos/150/150"
               alt="Profile Picture"
               width={150}
               height={150}
-              className="rounded-full border-4 border-border shadow-md" // Use theme border color
+              className="rounded-full border-4 border-border shadow-md"
               data-ai-hint="professional developer portrait"
             />
             <div className="text-center md:text-left">
@@ -57,15 +59,14 @@ export function AboutSection() {
           </p>
 
           <h3 className="mb-3 text-xl font-semibold text-foreground">Skills</h3>
-          <div className="mb-6 flex flex-wrap gap-3"> {/* Increased gap */}
+          <div className="mb-6 flex flex-wrap gap-3">
             {skills.map((skill) => (
-              // Use primary background with slightly higher opacity for better contrast
-              // Added flex and items-center to align icon and text
+              // Updated skill badge styling for better contrast: secondary background, secondary foreground text
               <span
                 key={skill.name}
-                className="inline-flex items-center gap-2 rounded-full bg-primary/20 px-4 py-1.5 text-sm font-medium text-primary-foreground backdrop-blur-sm" // Adjusted padding and added gap
+                className="inline-flex items-center gap-2 rounded-full bg-secondary/50 px-4 py-1.5 text-sm font-medium text-secondary-foreground backdrop-blur-sm border border-border/30" // Adjusted styling
               >
-                {skill.Icon && <skill.Icon className="h-4 w-4" />} {/* Render icon if provided */}
+                {skill.Icon && <skill.Icon className="h-4 w-4" />}
                 {skill.name}
               </span>
             ))}
