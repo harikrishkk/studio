@@ -119,9 +119,10 @@ body {
   * {
     @apply border-border;
   }
-  html {
-    @apply scroll-smooth; /* Enable smooth scrolling */
-  }
+  /* Remove html scroll-smooth to avoid jumpiness with hash links */
+  /* html {
+    @apply scroll-smooth;
+  } */
   body {
     @apply bg-background text-foreground overflow-x-hidden; /* Prevent horizontal scroll */
   }

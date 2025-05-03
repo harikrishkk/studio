@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "title": "MapleLeafDev Portfolio",
+    "description": "Portfolio of a seasoned front-end developer"
+  },
+  "header": {
+    "logoText": "MapleLeafDev",
+    "navItems": [
+      { "label": "About", "href": "#about" },
+      { "label": "Experience", "href": "#experience" },
+      { "label": "Projects", "href": "#projects" },
+      { "label": "Testimonials", "href": "#testimonials" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+  "lanyard": {
+    "name": "Harikrishnan K",
+    "title": "Senior Frontend Developer",
+    "company": "Tata Consultancy Services",
+    "imageUrl": "https://picsum.photos/150/150",
+    "imageAiHint": "professional developer portrait",
+    "description": "Passionate and experienced front-end developer with a knack for building beautiful, performant, and user-friendly web applications. Specializing in modern JavaScript frameworks and dedicated to writing clean, maintainable code. Always eager to learn and explore new technologies. Based in Canada, eh! 🍁",
+    "skills": [
+      "React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Firebase", "GraphQL", "Docker"
+    ],
+    "socialLinks": [
+      { "name": "GitHub", "url": "https://github.com/harikrishkk", "icon": "Github" },
+      { "name": "LinkedIn", "url": "https://linkedin.com/in/harikrishkk", "icon": "Linkedin" },
+      { "name": "Blog", "url": "https://blog.example.com", "icon": "Rss" }
+    ]
+  },
+  "experience": {
+    "title": "Work Experience",
+    "items": [
+       {
+        "company": "Tata Consultancy Services",
+        "logoUrl": "https://picsum.photos/40/40?random=tcs",
+        "logoAlt": "TCS Logo",
+        "aiHint": "tcs company logo",
+        "title": "Senior Frontend Developer",
+        "duration": "Sep 2018 - Present",
+        "description": "Leading front-end development for key client projects, focusing on React, Angular, and performance optimization. Mentoring junior developers and contributing to internal framework development.",
+        "techStack": ["React", "Angular", "TypeScript", "NgRx", "JavaScript", "Node.js", "CSS3", "HTML5"]
+      },
+      {
+        "company": "Infosys",
+        "logoUrl": "https://picsum.photos/40/40?random=infy",
+        "logoAlt": "Infosys Logo",
+        "aiHint": "infosys company logo",
+        "title": "Technology Analyst",
+        "duration": "Nov 2015 - Sep 2018",
+        "description": "Developed and maintained web applications for various clients using technologies like Angular.js and Java. Collaborated in Agile teams to deliver features and resolve bugs.",
+        "techStack": ["Angular.js", "Java", "JavaScript", "HTML", "CSS", "Spring", "Hibernate"]
+      },
+      {
+        "company": "Cognizant",
+        "logoUrl": "https://picsum.photos/40/40?random=cts",
+        "logoAlt": "Cognizant Logo",
+        "aiHint": "cognizant company logo",
+        "title": "Programmer Analyst",
+        "duration": "Sep 2013 - Nov 2015",
+        "description": "Worked on developing and testing software applications. Gained experience in the software development lifecycle and various testing methodologies.",
+        "techStack": ["Java", "SQL", "JavaScript", "HTML", "Selenium"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "title": "Project Maple",
+        "description": "A comprehensive web application built with Next.js and Tailwind CSS, showcasing interactive data visualizations.",
+        "imageUrl": "https://picsum.photos/600/400?random=4",
+        "aiHint": "web application screenshot dashboard",
+        "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Recharts"],
+        "liveUrl": "#",
+        "repoUrl": "#"
+      },
+      {
+        "title": "Portfolio v2",
+        "description": "The very portfolio you are looking at! Designed with a Canadian theme and built for performance.",
+        "imageUrl": "https://picsum.photos/600/400?random=5",
+        "aiHint": "portfolio website design code",
+        "tags": ["Next.js", "ShadCN UI", "Tailwind CSS", "Framer Motion"],
+        "repoUrl": "#"
+      },
+      {
+        "title": "Blog Platform",
+        "description": "A full-stack blogging platform featuring markdown support, user authentication, and a clean interface.",
+        "imageUrl": "https://picsum.photos/600/400?random=6",
+        "aiHint": "blog website interface article",
+        "tags": ["React", "Node.js", "Express", "MongoDB", "Firebase Auth"],
+        "liveUrl": "#"
+      }
+    ]
+  },
+  "testimonials": {
+     "title": "Here's what others are saying",
+     "subtitle": "They think my work is cool, maybe you will too!",
+     "items": [
+        {
+          "name": "Maurício Pradella",
+          "handle": "@mpradella",
+          "avatarUrl": "https://picsum.photos/48/48?random=10",
+          "aiHint": "developer portrait",
+          "text": "Working with MapleLeafDev was a fantastic experience. Professional, skilled, and delivered beyond expectations!"
+        },
+        {
+          "name": "Fernando",
+          "handle": "@Fernando_Her85",
+          "avatarUrl": "https://picsum.photos/48/48?random=11",
+          "aiHint": "man portrait",
+          "text": "Para los que trabajan en React, ¡tírenle un ojo a este recurso! Muy impresionado con la calidad del código."
+        },
+        {
+          "name": "Tracy",
+          "handle": "@Traccey001",
+          "avatarUrl": "https://picsum.photos/48/48?random=12",
+          "aiHint": "woman smiling",
+          "text": "This front-end work is absolutely amazing!!! So clean and performant."
+        },
+        {
+          "name": "Gibson",
+          "handle": "@GibsonSMurray",
+          "avatarUrl": "https://picsum.photos/48/48?random=13",
+          "aiHint": "person thinking",
+          "text": "mapleleafdev.ca has got to be the most artistic UI component lib I've seen in a while 🤔"
+        },
+        {
+          "name": "Virag",
+          "handle": "@Virag_Dev",
+          "avatarUrl": "https://picsum.photos/48/48?random=14",
+          "aiHint": "woman coding",
+          "text": "This is so cool! The way the components come together is just *chef's kiss*."
+        },
+        {
+          "name": "Alex Chen",
+          "handle": "@alex_frontend",
+          "avatarUrl": "https://picsum.photos/48/48?random=15",
+          "aiHint": "developer headshot",
+          "text": "Highly recommend MapleLeafDev for any complex UI challenges. True problem solver."
+        }
+      ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "cardTitle": "Contact Me",
+    "description": "Have a question or want to collaborate? Send me a message!",
+    "formLabels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your Name",
+      "email": "your.email@example.com",
+      "message": "Your message here..."
+    },
+    "buttonText": "Send Message",
+    "submittingText": "Sending..."
+  },
+  "footer": {
+    "copyright": "MapleLeafDev. All rights reserved.",
+    "builtWith": "Built with Next.js and Tailwind CSS."
+  }
+}
