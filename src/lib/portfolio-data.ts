@@ -1,7 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 import type { Icon as LucideIcon } from 'lucide-react';
-import { Github, Linkedin, Rss } from 'lucide-react'; // Keep icon imports here for mapping
+import {
+  Github,
+  Linkedin,
+  Rss,
+  Code,
+  Atom,
+  Globe,
+  FileCode,
+  Paintbrush,
+  Server,
+  Database,
+  Network,
+  Container
+} from 'lucide-react'; // Keep icon imports here for mapping
 
 // --- Data Structure Interfaces ---
 
@@ -124,6 +137,33 @@ export const socialIconMap: { [key: string]: LucideIcon } = {
   Rss: Rss,
   // Add other icons if needed
 };
+
+// Mapping for skill names to Lucide icons
+export const skillIconMap: { [key: string]: LucideIcon } = {
+  React: Atom,
+  'Next.js': Globe,
+  TypeScript: FileCode,
+  'Tailwind CSS': Paintbrush,
+  'Node.js': Server,
+  Firebase: Database, // Using Database icon for Firebase
+  GraphQL: Network,
+  Docker: Container,
+  Angular: Code, // Placeholder, could use Atom or specific Angular icon if available
+  'Angular.js': Code, // Placeholder
+  NgRx: Code, // Placeholder
+  JavaScript: Code, // Generic code icon
+  Java: Code, // Generic code icon
+  HTML: Code,
+  HTML5: Code,
+  CSS: Code,
+  CSS3: Code,
+  Spring: Code, // Placeholder
+  Hibernate: Code, // Placeholder
+  SQL: Database,
+  Selenium: Code, // Placeholder for testing tool
+  // Add more mappings as needed
+};
+
 
 // --- Data Loading Function ---
 
