@@ -53,13 +53,12 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="mb-16 scroll-mt-14 md:mb-24 md:scroll-mt-16">
-      {/* Removed text-primary */}
-      <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">
+      <h2 className="mb-8 text-center text-3xl font-bold text-foreground md:text-4xl">
         <Send className="mr-2 inline-block h-8 w-8" /> Get In Touch
       </h2>
-      <Card className="mx-auto max-w-2xl shadow-lg">
+      <Card className="mx-auto max-w-2xl shadow-lg bg-card/80 backdrop-blur-sm"> {/* Slightly transparent card */}
         <CardHeader>
-          <CardTitle>Contact Me</CardTitle>
+          <CardTitle className="text-foreground">Contact Me</CardTitle>
           <CardDescription>
             Have a question or want to collaborate? Send me a message!
           </CardDescription>
@@ -67,7 +66,7 @@ export function ContactSection() {
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Name</Label>
+              <Label htmlFor="name" className="text-foreground/90">Name</Label>
               <Input
                 id="name"
                 placeholder="Your Name"
@@ -75,12 +74,11 @@ export function ContactSection() {
                 onChange={(e) => setName(e.target.value)}
                 required
                 disabled={isSubmitting}
-                // Removed focus:ring-accent
-                className=""
+                className="bg-input/80" // Slightly transparent input
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email" className="text-foreground/90">Email</Label>
               <Input
                 id="email"
                 type="email"
@@ -89,12 +87,11 @@ export function ContactSection() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={isSubmitting}
-                // Removed focus:ring-accent
-                className=""
+                 className="bg-input/80" // Slightly transparent input
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="message">Message</Label>
+              <Label htmlFor="message" className="text-foreground/90">Message</Label>
               <Textarea
                 id="message"
                 placeholder="Your message here..."
@@ -103,15 +100,13 @@ export function ContactSection() {
                 onChange={(e) => setMessage(e.target.value)}
                 required
                 disabled={isSubmitting}
-                // Removed focus:ring-accent
-                className=""
+                 className="bg-input/80" // Slightly transparent input
               />
             </div>
             <Button
               type="submit"
               disabled={isSubmitting}
-              // Removed accent-specific classes, rely on default button variant
-              className="w-full"
+              className="w-full" // Rely on default button variant
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
               {!isSubmitting && <Send className="ml-2 h-4 w-4" />}

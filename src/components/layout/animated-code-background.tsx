@@ -1,4 +1,4 @@
-// src/components/layout/animated-gradient-background.tsx
+// src/components/layout/animated-code-background.tsx
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
@@ -20,7 +20,7 @@ const codeSymbols = ['<>', '{}', '()', '[]', '=>', '!=', '===', '&&', '||', ';',
 // Number of symbols to render
 const SYMBOL_COUNT = 50; // Keep count relatively low for performance
 
-export function AnimatedGradientBackground({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+export function AnimatedCodeBackground({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   const [symbols, setSymbols] = useState<SymbolData[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number>();
