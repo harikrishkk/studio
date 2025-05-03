@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'; // Added SheetHeader, SheetTitle
 import { Menu, Code } from 'lucide-react';
 
 export function Header() {
@@ -42,6 +42,10 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
+              {/* Added SheetHeader and SheetTitle for accessibility */}
+              <SheetHeader>
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              </SheetHeader>
               <nav className="grid gap-6 text-lg font-medium">
                 <Link
                   href="/"
