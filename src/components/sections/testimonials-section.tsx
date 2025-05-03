@@ -33,25 +33,35 @@ export function TestimonialsSection({ data }: TestimonialsSectionProps) {
           align: 'start',
           loop: true,
         }}
-        className="relative w-full"
+        // Increase max-width slightly for the carousel area if needed, or manage via parent container
+        className="relative w-full max-w-4xl mx-auto" // Added max-w-4xl and mx-auto
       >
+        {/* Increased width of gradient overlays */}
         <div
-          className="absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent pointer-events-none"
+          className="absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent pointer-events-none" // Increased w-16 to w-24
           aria-hidden="true"
         />
         <div
-          className="absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent pointer-events-none"
+          className="absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent pointer-events-none" // Increased w-16 to w-24
           aria-hidden="true"
         />
 
         <CarouselContent className="-ml-4">
           {testimonials.map((testimonial, index) => (
             <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-              <div className="p-1 h-full">
-                <Card className="flex h-full flex-col justify-between bg-card/70 backdrop-blur-sm border border-border/40 shadow-md transition-transform hover:scale-[1.01]">
-                  <CardContent className="flex flex-col items-start gap-4 p-6">
+              {/* Apply hover effect and angular alignment */}
+              <div className={`p-1 h-full transition-transform duration-300 ease-out hover:scale-105 ${
+                  index % 2 === 0 ? 'hover:-rotate-3' : 'hover:rotate-3' // Alternate rotation on hover
+                }`}>
+                <Card
+                  className={`flex h-full flex-col justify-between bg-card/70 backdrop-blur-sm border border-border/40 shadow-md ${
+                    index % 2 === 0 ? '-rotate-2' : 'rotate-2' // Apply initial slight rotation
+                  }`}
+                  style={{ maxWidth: '300px' }} // Make cards smaller
+                  >
+                  <CardContent className="flex flex-col items-start gap-3 p-4"> {/* Reduced padding */}
                     <div className="flex items-center gap-3">
-                      <Avatar className="h-12 w-12 border-2 border-border/50">
+                      <Avatar className="h-10 w-10 border-2 border-border/50"> {/* Smaller avatar */}
                         <AvatarImage
                           src={testimonial.avatarUrl}
                           alt={testimonial.name}
@@ -60,11 +70,11 @@ export function TestimonialsSection({ data }: TestimonialsSectionProps) {
                         <AvatarFallback>{testimonial.name.substring(0, 2)}</AvatarFallback>
                       </Avatar>
                       <div>
-                        <p className="font-semibold text-foreground">{testimonial.name}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.handle}</p>
+                        <p className="font-semibold text-foreground text-sm">{testimonial.name}</p> {/* Smaller name */}
+                        <p className="text-xs text-muted-foreground">{testimonial.handle}</p> {/* Smaller handle */}
                       </div>
                     </div>
-                    <p className="text-base text-foreground/90">"{testimonial.text}"</p>
+                    <p className="text-sm text-foreground/90">"{testimonial.text}"</p> {/* Smaller text */}
                   </CardContent>
                 </Card>
               </div>
