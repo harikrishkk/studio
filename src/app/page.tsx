@@ -1,6 +1,7 @@
 import { AboutSection } from '@/components/sections/about-section';
 import { ExperienceSection } from '@/components/sections/experience-section';
 import { ProjectsSection } from '@/components/sections/projects-section';
+import { TestimonialsSection } from '@/components/sections/testimonials-section'; // Import the new section
 import { ContactSection } from '@/components/sections/contact-section';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
@@ -13,6 +14,7 @@ export default function Home() {
         <AboutSection />
         <ExperienceSection />
         <ProjectsSection />
+        <TestimonialsSection /> {/* Add the new section here */}
         <ContactSection />
       </div>
       <Footer />

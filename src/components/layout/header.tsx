@@ -8,6 +8,7 @@ export function Header() {
     { label: 'About', href: '#about' },
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Testimonials', href: '#testimonials' }, // Added Testimonials link
     { label: 'Contact', href: '#contact' },
   ];
 
